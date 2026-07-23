@@ -37,22 +37,21 @@ public class Main {
             System.out.println("Если возраст человека равен или больше " + personsAge + " ему пора ходить на работу");
         }
         System.out.println("Задание N 5");
-        int childsAge = 10;
+        int childAge = 10;
         int adult = 1;
-        if (childsAge <= 5){
-            System.out.println("Если возраст ребенка " + childsAge + " лет, ему нельзя кататься на аттракционах");
-        } else if (childsAge > 5 && childsAge <= 14 && adult >= 1){
-            System.out.println("Если возрост ребенка " + childsAge + " лет, он может котаться только в сопровождении взрослого");
-        } else if (childsAge > 14){
-            System.out.println("Если возраст ребенка " + childsAge + " лет, он может кататься самостоятельно, без сопровождения");
-        }else if (childsAge > 5 && childsAge <= 14 && adult < 1){
-            System.out.println("Если возраст ребенка " + childsAge + " лет, он не может кататься без сопровождения взрослого");
+        if (childAge <= 5){
+            System.out.println("Если возраст ребенка " + childAge + " лет, ему нельзя кататься на аттракционах");
+        } else if (childAge > 5 && childAge <= 14 && adult >= 1){
+            System.out.println("Если возрост ребенка " + childAge + " лет, он может котаться только в сопровождении взрослого");
+        } else if (childAge > 14){
+            System.out.println("Если возраст ребенка " + childAge + " лет, он может кататься самостоятельно, без сопровождения");
+        }else if (childAge > 5 && childAge <= 14 && adult < 1){
+            System.out.println("Если возраст ребенка " + childAge + " лет, он не может кататься без сопровождения взрослого");
         }
         System.out.println("Задание N 6");
         int numberOfPeople = 50;
         int seatsInTheCarriage = 102;
         int seatingPosition = 60;
-        int  standingRoom = seatsInTheCarriage - seatingPosition;
         if (seatingPosition > numberOfPeople && numberOfPeople < seatsInTheCarriage){
             System.out.println("В вагоне есть свободные сидячии и стоячии места");
         } else if (seatingPosition == numberOfPeople){
