@@ -32,41 +32,40 @@ public class Main {
             System.out.println("Високостный год был введен с 1584 г. ");
         }
         System.out.println("Задание N 4");
-        int deliveryDistance = 21;
+        int deliveryDistance = 95;
+        int deliveryDays = 0;
         if (deliveryDistance <= 20){
-            System.out.println("На доставку потребуется один день");
-        }else if (deliveryDistance > 20 && deliveryDistance <= 60){
-            System.out.println("На доставку потребуется два дня");
-        }else if (deliveryDistance > 60 && deliveryDistance <= 100){
-            System.out.println("На доставку потребуется три дня");
+            int i = deliveryDays ++;
+            System.out.println("Доставка занимает " + deliveryDays + " день");
+        } if (deliveryDistance > 20 && deliveryDistance <= 60){
+            int i = deliveryDays++;
+            deliveryDays++;
+            System.out.println("Доставка занимает " + deliveryDays + " дня");
+        } if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            int i = deliveryDays ++;
+            deliveryDays++;
+            deliveryDays++;
+            System.out.println("Доставка занимает " + deliveryDays + " дня");
         }else if (deliveryDistance > 100){
             System.out.println("Доставки нет");
         }
         System.out.println("Задание N 5");
         int monthNumber = 8;
         switch (monthNumber){
-            case 12:
-            case 1:
-            case 2:
+            case 12,1,2:
                 System.out.println("Сейчас зима");
                 break;
-            case 3:
-            case 4:
-            case 5:
+            case 3,4,5:
                 System.out.println("Сейчас весна");
                 break;
-            case 6:
-            case 7:
-            case 8:
+            case 6,7,8:
                 System.out.println("Сейчас лето");
                 break;
-            case 9:
-            case 11:
-            case 10:
+            case 9,10,11:
                 System.out.println("Сейчас осень");
                 break;
             default:
-                System.out.println("Такова месяца нет");
+                System.out.println("Не коректный номер месяца");
         }
     }
 }
