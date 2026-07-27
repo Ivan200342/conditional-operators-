@@ -13,18 +13,21 @@ public class Main {
         int clientDeviceYear = 2016;
         if (clientOS == 0 && clientDeviceYear > 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOS == 0 && clientDeviceYear <= 2015) {
+        }
+        else if (clientOS == 0 && clientDeviceYear <= 2015){
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-        }else if (clientOS == 1 && clientDeviceYear > 2015) {
+        }
+        else if (clientOS == 1 && clientDeviceYear > 2015){
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (clientOS == 1 && clientDeviceYear <= 2015) {
+        }
+        else if (clientOS == 1 && clientDeviceYear <= 2015){
             System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
         System.out.println("Задание N 3");
-        int year = 1900;
+        int year = 2004;
         if (year < 1583) {
             System.out.println("Год не является високостным");
-        } else if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+        } else if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
             System.out.println("Год является високостным");
         } else {
             System.out.println("Год не является високостным");
@@ -46,18 +49,26 @@ public class Main {
         System.out.println("Задание N 5");
         int monthNumber = 7;
         switch (monthNumber){
-            case 12,1,2:
+            case 12:
+            case 1:
+            case 2:
                 System.out.println("Сейчас зима");
-                break;
-            case 3,4,5:
+             break;
+            case 3:
+            case 4:
+            case 5:
                 System.out.println("Сейчас весна");
-                break;
-            case 6,7,8:
+             break;
+            case 6:
+            case 7:
+            case 8:
                 System.out.println("Сейчас лето");
-                break;
-            case 9,10,11:
+             break;
+            case 9:
+            case 10:
+            case 11:
                 System.out.println("Сейчас осень");
-                break;
+             break;
             default:
                 System.out.println("Этот месяц еще не придумали");
                 // switch использован для всех условий определения сезона else не использовал.
