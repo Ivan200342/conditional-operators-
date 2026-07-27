@@ -30,15 +30,15 @@ public class Main {
             System.out.println("Год не является високостным");
         }
         System.out.println("Задание N 4");
-        int deliveryDistance = 19;
+        int deliveryDistance = 21;
         int deliveryDays = 1;
         if (deliveryDistance <= 20){
             System.out.println("Доставка занимает " + deliveryDays + " день");
         } else if (deliveryDistance > 20 && deliveryDistance <= 60){
-            int i = deliveryDays++;
+            deliveryDays++;
             System.out.println("Доставка занимает " + deliveryDays + " дня");
         } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            int i = deliveryDays += 2;
+            deliveryDays += 2;
             System.out.println("Доставка занимает " + deliveryDays + " дня");
         }else if (deliveryDistance > 100){
             System.out.println("Доставки нет");
