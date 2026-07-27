@@ -1,56 +1,50 @@
-import org.w3c.dom.ls.LSOutput;
-
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание N 1");
-        char clientOS = 1;
-        if (clientOS == 0) {
+        int clientOS = 0;
+        if (clientOS == 1) {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else if ( clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-        } else if (clientOS == 1) {
-                System.out.println("Установите версию приложения для Android по ссылке");
         }
         System.out.println("Задание N 2");
-        char clientDeviceYear = 2011;
-        if (clientOS == 0) {
+        int clientDeviceYear = 2016;
+        if (clientOS == 0 && clientDeviceYear > 2015) {
             System.out.println("Установите версию приложения для iOS по ссылке");
-            if (clientOS == 0 && clientDeviceYear < 2015);
-            System.out.println("Если год выпуска вашего устройство ранее 2015 г. установите облегченную версию приложения для iOS по ссылке");
-        }else if (clientOS == 1) {
+        } else if (clientOS == 0 && clientDeviceYear <= 2015) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+        }else if (clientOS == 1 && clientDeviceYear > 2015) {
             System.out.println("Установите версию приложения для Android по ссылке");
-            if (clientOS == 1 && clientDeviceYear < 2015);
-            System.out.println("Если год выпуска вашего устройстава ранее 2015 г. установите облегченную версию приложения для Android по ссылке");
+        } else if (clientOS == 1 && clientDeviceYear <= 2015) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
         }
         System.out.println("Задание N 3");
-        int year = 1936;
-        if (year % 4 == 0 && year > 1583) {
-            System.out.println("Год является високостным");
-        } else if (year % 4 != 0) {
+        int year = 1900;
+        if (year < 1583) {
             System.out.println("Год не является високостным");
-        } else if (year < 1584) {
-            System.out.println("Високостный год был введен с 1584 г. ");
+        } else if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+            System.out.println("Год является високостным");
+        } else {
+            System.out.println("Год не является високостным");
         }
         System.out.println("Задание N 4");
-        int deliveryDistance = 95;
-        int deliveryDays = 0;
+        int deliveryDistance = 19;
+        int deliveryDays = 1;
         if (deliveryDistance <= 20){
-            int i = deliveryDays ++;
             System.out.println("Доставка занимает " + deliveryDays + " день");
-        } if (deliveryDistance > 20 && deliveryDistance <= 60){
+        } else if (deliveryDistance > 20 && deliveryDistance <= 60){
             int i = deliveryDays++;
-            deliveryDays++;
             System.out.println("Доставка занимает " + deliveryDays + " дня");
-        } if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            int i = deliveryDays ++;
-            deliveryDays++;
-            deliveryDays++;
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            int i = deliveryDays += 2;
             System.out.println("Доставка занимает " + deliveryDays + " дня");
         }else if (deliveryDistance > 100){
             System.out.println("Доставки нет");
-        }
+        } // как правильно работает инкрементация? мы этого еще не проходили. Как сделать без нее не знаю. Может подскажите где почитать про эту тему?
         System.out.println("Задание N 5");
-        int monthNumber = 8;
+        int monthNumber = 7;
         switch (monthNumber){
             case 12,1,2:
                 System.out.println("Сейчас зима");
@@ -65,7 +59,8 @@ public class Main {
                 System.out.println("Сейчас осень");
                 break;
             default:
-                System.out.println("Не коректный номер месяца");
+                System.out.println("Этот месяц еще не придумали");
+                // switch использован для всех условий определения сезона else не использовал.
         }
     }
 }
